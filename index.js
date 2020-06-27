@@ -24,8 +24,6 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use(passsort.initialize());
 require('./config/passport.config');
-app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
-app.use('', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')));
 
 app.use('/api/seller', routes.seller);
 app.use('/api/product', routes.product);
